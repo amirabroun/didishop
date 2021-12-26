@@ -1,0 +1,3 @@
+php_value auto_prepend_file "D:\--php\didishop\user\core.php"
+
+ErrorDocument 404 /404.php
