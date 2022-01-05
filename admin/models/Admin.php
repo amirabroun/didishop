@@ -16,3 +16,19 @@ function doLogin($username, $password)
     }
     return false;
 }
+
+
+function getAdmin($id)
+{
+    global $cn;
+    $sql = "SELECT * From admins where id = ? LIMIT 1";
+    $result = $cn->prepare($sql);
+    $result->bindValue(1, $id);
+    $result->execute();
+    if ($result->rowCount() > 0) {
+        return $result->fetch(PDO::FETCH_OBJ);
+    }
+    return false;
+
+}
+

@@ -43,7 +43,7 @@
                         <li class="nav-item account dropdown">
                             <?php
                             if (isset($_SESSION['_user_log_'])) {
-                                ?>
+                            ?>
                                 <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="label-dropdown">حساب کاربری</span>
                                     <i class="mdi mdi-account-circle-outline"></i>
@@ -64,9 +64,9 @@
                                         <i class="mdi mdi-logout-variant"></i>خروج
                                     </a>
                                 </div>
-                                <?php
+                            <?php
                             } else {
-                                ?>
+                            ?>
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link" href="javascript:;">
                                     <span class="label-dropdown">ورود/ثبت نام</span>
                                     <i class="fa fa-sign-in vertical-align-md"></i>
@@ -79,7 +79,7 @@
                                         <i class=""></i>ثبت نام
                                     </a>
                                 </div>
-                                <?php
+                            <?php
                             }
                             ?>
                         </li>

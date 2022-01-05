@@ -1,18 +1,25 @@
 <?php
 
 if ((POST('action') === 'create_product') && !validator(['title', 'price', 'brand'])) {
+
     $createProduct = createProduct(POST('title'), convertNumberToEnglish(POST('price')), convertNumberToEnglish(POST('price_discounted')), POST('stock'), POST('brand'), POST('description'));
+
     if ($createProduct) {
+
         foreach (POST('category') as $item) {
+
             createCategoryProduct($item, $createProduct);
         }
+
         $_SESSION['message'] = [
             'title' => 'عملیات موفق',
             'type' => 'success',
             'text' => 'محصول با موفقیت ایجاد شد!',
         ];
+
         back();
     } else {
+
         $_SESSION['message'] = [
             'title' => 'عملیات ناموفق',
             'type' => 'error',
@@ -22,7 +29,9 @@ if ((POST('action') === 'create_product') && !validator(['title', 'price', 'bran
 }
 
 if (POST('action') === 'upload_picture_product') {
+
     if (array_sum($_FILES['picture_product_file']['size']) === 0) {
+
         responseJson([
             'status' => 205,
             'message' => [
@@ -32,13 +41,21 @@ if (POST('action') === 'upload_picture_product') {
             ],
         ]);
     }
+
     $files = [];
+
     $keys = array_keys($_FILES['picture_product_file']);
+
     $errors = [];
+
     foreach ($keys as $item) {
+
         foreach ($_FILES['picture_product_file'][$item] as $key => $file) {
+
             if (isset($files[$key])) {
+
                 $files[$key] = array_merge([$item => $file], $files[$key]);
+
                 continue;
             }
 
@@ -48,24 +65,36 @@ if (POST('action') === 'upload_picture_product') {
 
 
     foreach ($files as $key => $file) {
+
         if (empty($file['size'])) {
             continue;
         }
         $original_name = $file['name'];
+
         $suffix = pathinfo($file['name'], PATHINFO_EXTENSION);
+
         $new_name = md5($original_name . microtime()) . '.' . $suffix;
+
         $path = '/images/products/';
+
         $full_path = rtrim(PUBLIC_DOMAIN_ROOT, '/') . $path . $new_name;
+
         if (@move_uploaded_file($file['tmp_name'], $full_path)) {
+
             $createPhoto = createPhoto($new_name, $path);
+
             if ($createPhoto) {
+
                 deletePhotoProduct($_POST['product_id'], $key + 1);
+
                 $createPhotoProduct = createPhotoProduct($createPhoto, $_POST['product_id'], $key + 1);
+
                 if ($createPhotoProduct) {
                     continue;
                 }
             }
         }
+
         $errors[] = ['file_name' => $original_name];
     }
 
@@ -81,9 +110,20 @@ if (POST('action') === 'upload_picture_product') {
 }
 
 if (POST('action') === 'update_product') {
-    if (!validator(['id', 'title'])) {
+
+    $validator = validator([
+        'id' => 'required|number',
+        'title' => 'required',
+        'brand_id' => 'required|number',
+        'description' => 'required',
+    ]);
+
+    if ($validator['status']) {
+
         $updateProduct = updateProduct(POST('id'), POST('brand_id'), POST('title'), POST('description'));
+
         if ($updateProduct) {
+
             responseJson([
                 'status' => 200,
                 'message' => [
@@ -93,6 +133,7 @@ if (POST('action') === 'update_product') {
                 ],
             ]);
         }
+
         responseJson([
             'status' => 201,
             'message' => [
