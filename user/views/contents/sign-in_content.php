@@ -29,7 +29,7 @@
                             <div class="form-footer text-right mt-3">
                                 <a href="<?php echo url('sign-in.php'); ?>" class="d-inline-block mt-2 mb-2">ورود با کلمه عبور</a>
                                 <span class="d-block font-weight-bold">کاربر جدید هستید؟</span>
-                                <a href="#" class="d-inline-block mr-3 mt-2">ثبت نام در <?php echo APP_NAME; ?></a>
+                                <a href="<?php echo url('sign-up.php'); ?>" class="d-inline-block mr-3 mt-2">ثبت نام در <?php echo APP_NAME; ?></a>
                             </div>
                         </form>
                     <?php
@@ -50,13 +50,13 @@
                             <div class="form-row mt-3">
                                 <button class="btn-primary-cm btn-with-icon mx-auto w-100">
                                     <i class="mdi mdi-login-variant"></i>
-                                    ارسال کد
+                                    تایید کد
                                 </button>
                             </div>
                             <div class="form-footer text-right mt-3">
                                 <a href="<?php echo url('sign-in.php'); ?>" class="d-inline-block mt-2 mb-2">ورود با کلمه عبور</a>
                                 <span class="d-block font-weight-bold">کاربر جدید هستید؟</span>
-                                <a href="#" class="d-inline-block mr-3 mt-2">ثبت نام در <?php echo APP_NAME; ?></a>
+                                <a href="<?php echo url('sign-up.php'); ?>" class="d-inline-block mr-3 mt-2">ثبت نام در <?php echo APP_NAME; ?></a>
                             </div>
                         </form>
                     <?php
@@ -92,13 +92,13 @@
                             <div class="form-row mt-3">
                                 <button class="btn-primary-cm btn-with-icon mx-auto w-100">
                                     <i class="mdi mdi-login-variant"></i>
-                                    ورود به دیدیکالا
+                                    ورود به <?php echo APP_NAME; ?>
                                 </button>
                             </div>
                             <div class="form-footer text-right mt-3">
                                 <a href="<?php echo url('sign-in.php?type=by_otp'); ?>" class="d-inline-block mt-2 mb-2">ورود با رمز یکبار مصرف</a>
                                 <span class="d-block font-weight-bold">کاربر جدید هستید؟</span>
-                                <a href="#" class="d-inline-block mr-3 mt-2">ثبت نام در دیدیکالا</a>
+                                <a href="<?php echo url('sign-up.php'); ?>" class="d-inline-block mr-3 mt-2">ثبت نام در <?php echo APP_NAME; ?></a>
                             </div>
                         </form>
                     <?php

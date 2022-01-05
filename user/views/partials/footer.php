@@ -50,7 +50,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="widget-menu widget card">
                         <header class="card-header">
-                            <h3 class="card-title">راهنمای خرید از تاپ کالا</h3>
+                            <h3 class="card-title">راهنمای خرید از <?php echo APP_NAME; ?></h3>
                         </header>
                         <ul class="footer-menu">
                             <li>
@@ -89,11 +89,11 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="widget-menu widget card">
                         <header class="card-header">
-                            <h3 class="card-title">با تاپ کالا</h3>
+                            <h3 class="card-title">با <?php echo APP_NAME; ?></h3>
                         </header>
                         <ul class="footer-menu">
                             <li>
-                                <a href="#">فروش در تاپ کالا</a>
+                                <a href="#">فروش در <?php echo APP_NAME; ?></a>
                             </li>
                             <li>
                                 <a href="#">همکاری با سازمان‌ها</a>
@@ -102,10 +102,10 @@
                                 <a href="#">فرصت‌های شغلی</a>
                             </li>
                             <li>
-                                <a href="#">تماس با تاپ کالا</a>
+                                <a href="#">تماس با ما</a>
                             </li>
                             <li>
-                                <a href="#">درباره تاپ کالا</a>
+                                <a href="#">درباره ما</a>
                             </li>
                         </ul>
                     </div>
@@ -144,9 +144,9 @@
         <div class="container main-container">
             <div class="row">
                 <div class="site-description col-12 col-lg-7">
-                    <h1 class="site-title">فروشگاه اینترنتی تاپ کالا، بررسی، انتخاب و خرید آنلاین</h1>
+                    <h1 class="site-title">فروشگاه اینترنتی <?php echo APP_NAME; ?>، بررسی، انتخاب و خرید آنلاین</h1>
                     <p>
-                        تاپ کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با
+                        <?php echo APP_NAME; ?> به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با
                         پایبندی به سه اصل کلیدی، پرداخت در
                         محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده تا همگام با فروشگاه‌های
                         معتبر جهان، به بزرگ‌ترین فروشگاه
@@ -165,9 +165,9 @@
     <div class="copyright">
         <div class="container main-container">
             <p>
-                استفاده از مطالب فروشگاه اینترنتی تاپ کالا فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است.
+                استفاده از مطالب فروشگاه اینترنتی <?php echo APP_NAME; ?> فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است.
                 کلیه حقوق این سایت متعلق
-                به شرکت نوآوران فن آوازه (فروشگاه آنلاین تاپ کالا) می‌باشد.
+                به شرکت نوآوران فن آوازه (فروشگاه آنلاین <?php echo APP_NAME; ?>) می‌باشد.
             </p>
         </div>
     </div>

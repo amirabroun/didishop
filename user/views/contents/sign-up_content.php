@@ -43,14 +43,14 @@
                                     <h3>نام:</h3>
                                 </div>
                                 <div class="form-row with-icon">
-                                    <input type="text" class="input-ui pr-2" name="first_name" placeholder="نام خود را وارد نمایید!">
+                                    <input type="text" class="input-ui pr-2" name="first_name" placeholder="نام خود را وارد نمایید">
                                     <i class="mdi mdi-account-circle-outline"></i>
                                 </div>
                                 <div class="form-row-title">
                                     <h3>نام خانوادگی:</h3>
                                 </div>
                                 <div class="form-row with-icon">
-                                    <input type="text" class="input-ui pr-2" name="last_name" placeholder="نام خانوادگی خود را وارد نمایید!">
+                                    <input type="text" class="input-ui pr-2" name="last_name" placeholder="نام خانوادگی خود را وارد نمایید">
                                     <i class="mdi mdi-account-circle-outline"></i>
                                 </div>
                                 <div class="form-row-title">
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form-row with-icon">
                                     <input type="text" class="input-ui pr-2" name="cellphone" placeholder="شماره موبایل خود را وارد نمایید">
-                                    <i class="mdi mdi-account-circle-outline"></i>
+                                    <i class="mdi mdi-cellphone-android"></i>
                                 </div>
                                 <div class="form-row-title">
                                     <h3>رمز عبور</h3>
@@ -103,7 +103,7 @@
                                     <div class="custom-control custom-checkbox float-right mt-2">
                                         <input type="checkbox" name="term" class="custom-control-input" id="term">
                                         <label class="custom-control-label text-justify" for="term">
-                                            <a href="#">حریم خصوصی</a> و <a href="#">شرایط و قوانین</a> استفاده از سرویس های سایت دیدیکالا را مطالعه نموده و با کلیه موارد آن موافقم.
+                                            <a href="#">حریم خصوصی</a> و <a href="#">شرایط و قوانین</a> استفاده از سرویس های سایت <?php echo APP_NAME; ?> را مطالعه نموده و با کلیه موارد آن موافقم.
                                         </label>
                                     </div>
                                 </div>
