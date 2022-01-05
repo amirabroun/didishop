@@ -7,8 +7,9 @@ if (POST('action') === 'sign-in') {
     ]);
 
     if ($validator['status']) {
-
-        if (doLogin(POST('cellphone'), POST('password'))) {
+        
+        $login = doLogin(POST('cellphone'), POST('password'));
+        if ($login) {
 
             $_SESSION['_user_log_'] = $login->id;
 

@@ -15,7 +15,8 @@ if (POST('action') === 'sign-up') {
 
         if (!checkThereIsUser(POST('cellphone'))) {
 
-            $verify_code = generateDigit(6);
+            $verify_code = 123456;
+            // $verify_code = generateDigit(6);
 
             // برای کاربر $verify_code ارسال 
 
@@ -33,7 +34,11 @@ if (POST('action') === 'sign-up') {
                 'token' => sha1($verify_code . POST('cellphone')),
                 'expire_time' => time(),
             ];
-
+            $_SESSION['message'] = [
+                'title' => 'تایید تلفن همراه!',
+                'text'  => 'لطفا کد ارسال شده به تلفن همراه تان را وارد نمایید!',
+                'type'  => 'info',
+            ];
             redirect('/sign-up.php?type=by_otp&token=' . $_SESSION['signUp_otp']['token']);
         } else {
 
@@ -100,7 +105,7 @@ if (POST('action') === 'sign-up-otp') {
 
                 $_SESSION['message'] = [
                     'title' => $_SESSION['signUp_otp']['first_name'] . ' عزیز',
-                    'text'  => 'با موفقیت حساب کاربری شما ساخته شد!',
+                    'text'  => 'حساب کاربری شما با موفقیت ساخته شد!',
                     'type'  => 'success',
                 ];
 
